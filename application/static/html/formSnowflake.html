@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snowflake</title>
+    <link rel="stylesheet" href="../css/styleSnowflake.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+    </style>
+<body>
+    <div id="snowflake_form" class="form">
+        <h1 id="headerSnowflake">Enter credentials</h1>
+
+        <div>
+            <h2 id="titleUsername">Username</h2>
+            <h2 id="titleIdentifier">Account Identifier</h2>
+            <h2 id="titlePassword">Password</h2>
+        </div>
+
+        <div id="form">
+                <input id="username" placeholder="Enter your username" />
+                <input type="password" id="password" placeholder="Enter your password"/>
+                <input id="account_identifier" placeholder="Enter your account identifier"/>
+            </div>
+
+            <button id="connect" onclick="on_connect_snowflake()">Connect</button>
+
+            <button id="closeB" onclick="close_popup('snowflake_modal')">
+             <img id="closeIcon" src="../css/images/Close.png" alt="Кнопка «button»"></button>
+                <div id="connection_logging"></div>
+
+        <p id="db_name" style="display: none">snowflake</p>
+    </div>
+<script type="text/javascript" src="../js/connect.js"></script>
+</body>
+</html>

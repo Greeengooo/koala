@@ -1,0 +1,114 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Koala</title>
+    <link rel="icon" type="image/jpg" href="{{url_for('static', path='css/images/dataBase.png')}}">
+    <link rel="stylesheet" href="{{url_for('static', path='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+    </style>
+<body>
+    <div class="header">
+        <div><h1 id="koala">KOALA</h1> </div>
+         <div>
+        <img id="logo" src="../static/css/images/koala.png" >
+        </div>
+        <div>
+            <a id ="examples" href="https://github.com/EvgSkv/logica/tree/main/examples">Examples</a>
+        </div>
+         <div>
+            <a id ="about" href="https://github.com/Greeengooo/koala_opa">About</a>
+        </div>
+    </div>
+
+
+
+     <div class="connection">
+        {# <div id="custom-select">#}
+                    {#<div id="connection_form">#}
+                     <select name="connection" id="connections" onchange="on_select_ds()">
+                            <option name="option" value="Select DataSource" disabled selected >&nbsp; &nbsp; &nbsp;
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Select DataSource
+                           </option>
+                       {% for connection in connections %}
+                            <option name="option" value={{connection}}>&nbsp; &nbsp; &nbsp;
+                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{connection}}</option>
+                        {% endfor %}
+                    </select>
+
+          {# </div>#}
+
+{#</div>#}
+
+         <div>
+     <h2 id="datasource">DATA SOURCE</h2>
+         </div>
+             <div id="ds_info_wrapper">
+                <h2 id="databases">DATABASES</h2>
+                 <div id="ds_info"></div>
+            </div>
+            <div>
+                 <h2 id="connectto">CONNECT TO</h2>
+            </div>
+
+         <div>
+         <button id="snowflakeB" type="button" onclick="open_popup('snowflake_modal')">Snowflake</button>
+         </div>
+
+         <div>
+         <button id="mysqlB" type="button" onclick="open_popup('mysql_modal')">MySQL</button>
+         </div>
+
+         <hr id ="line1">
+
+     </div>
+
+    <div class="query">
+          <div id="logica_form">
+               <p><textarea id='lineCounter' wrap='off' readonly>1</textarea>
+               <textarea id="logica_input" spellcheck="false"></textarea>
+               <input type="text" id="predicate" name="predicateInput">
+
+               <button id="runB" onclick="on_run()">
+             <img id="playIcon"src="static/css/images/Play.png" alt="Кнопка «button»">&nbsp; &nbsp; &nbsp; Run</button>
+
+            <button id="clearB" type="button" onclick="on_clear()">
+             <img id="trashIcon"src="static/css/images/Trash.png" alt="Кнопка «button»">&nbsp; &nbsp; &nbsp; Clear</button>
+
+          </div>
+        <hr id ="line2">
+        <div id="query_logging">
+            <i id="query_status"></i>
+            <p id="output"></p>
+        </div>
+        <hr id ="line3">
+    </div>
+
+     <!-- для вывода результата  -->
+        <div id="query_results"> </div>
+
+        <div id="snowflake_modal" class="modal">
+            <div class="modal-content">
+                <iframe src="static/html/formSnowflake.html" frameborder="0"></iframe>
+            </div>
+        </div>
+
+         <div id="mysql_modal" class="modal">
+            <div class="modal-content">
+                <iframe src="static/html/formMySQL.html" frameborder="0"></iframe>
+            </div>
+        </div>
+
+        <script type="text/javascript" src="{{url_for('static', path='js/query_run.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static', path='js/select_datasource.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static', path='js/connect.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static', path='js/line_numbering.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static', path='js/behave.js')}}"></script>
+</body>
+</html>

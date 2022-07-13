@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+logica = { ref = "1.6", git = "https://github.com/Greeengooo/opa_logica.git" }
+fastapi = "*"
+snowflake-sqlalchemy = "*"
+sqlalchemy = "*"
+uvicorn = "*"
+pydantic = "*"
+jinja2 = "*"
+python-multipart = "*"
+pandas = "*"
+pymysql = "*"
+
+[dev-packages]
+pytest = "*"
+pre-commit = "*"
+flake8 = "*"
+black = "*"
+isort = "*"
+
+[requires]
+python_version = "3.9"

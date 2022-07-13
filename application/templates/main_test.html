@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Koala</title>
+        <link rel="stylesheet" href="{{url_for('static', path='css/style.css')}}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="ui container">
+            <h1>Koala</h1>
+
+            <div id="connection_selector">
+             <select name="connection" id="connections" onchange="on_select_ds()">
+                    <option name="option" value="" disabled selected>Select DataSource</option>
+               {% for connection in connections %}
+                    <option name="option" value={{connection}}>{{connection}}</option>
+                {% endfor %}
+            </select>
+            </div>
+
+
+            <div id="form">
+                <input id="db_name">
+                <input id="username">
+                <input type="password" id="password">
+                <input id="account_identifier">
+                <button id="connect" onclick="on_connect()">Submit</button>
+            </div>
+            <div id="connection_logging"></div>
+
+            <!-- Поле для ввода звпроса, предиката и кнопка RUN  -->
+            <div id="logica_form">
+                <textarea id="logica_input"></textarea>
+                <input  id="predicate">
+                <button id="submit_q" onclick="on_run()">Run</button>
+            </div>
+
+        </div>
+
+        <!-- Для вывода количества строк и ошибок  -->
+        <div id="query_logging">
+            <p id="row_count"></p>
+            <p id="errors"></p>
+        </div>
+
+        <!-- для вывода результата  -->
+        <div id="query_results"> </div>
+
+        <!-- для вывода информации о таблицах и базах  -->
+        <div id="ds_info"></div>
+
+        <script type="text/javascript" src="{{url_for('static', path='js/query_run.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static', path='js/select_datasource.js')}}"></script>
+        <script type="text/javascript" src="{{url_for('static', path='js/connect.js')}}"></script>
+    </body>
+</html>

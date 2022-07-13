@@ -1,0 +1,220 @@
+
+
+.form{
+position: absolute;
+    margin: 0 auto;
+    top: calc( 50% - 292px);
+    left:calc( 50% - 212px);
+width: 424px;
+height: 514px;
+
+background: #F2F8F0;
+border-radius: 20px;}
+
+#headerSnowflake{
+     margin: 0;
+  padding: 0;
+    position: absolute;
+width: 340px;
+height: 20px;
+left: 42px;
+top: 32px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+
+color: #000000;
+}
+
+#titleConnectionURL{
+    margin: 0;
+  padding: 0;
+     position: absolute;
+    left: 42px;
+    top: 84px;
+    width: 118px;
+height: 20px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+
+color: #000000;
+}
+
+#titlePassword{
+    margin: 0;
+  padding: 0;
+     position: absolute;
+    left: 42px;
+    top: 168px;
+width: 70px;
+height: 20px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+
+color: #000000;
+}
+
+#titleUsername{
+    margin: 0;
+  padding: 0;
+     position: absolute;
+    left: 42px;
+    top: 76px;
+    width: 70px;
+height: 20px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+
+color: #000000;}
+
+
+#username{
+     position: absolute;
+    left: 42px;
+    top: 104px;
+      width: 108px;
+height: 20px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+
+color: rgba(0, 0, 0, 0.8);
+
+    box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 14px 0px 14px 24px;
+gap: 10px;
+
+width: 340px;
+height: 48px;
+
+background: #FFFFFF;
+border: 2px solid rgba(0, 0, 0, 0.3);
+border-radius: 20px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+}
+
+#password{
+     position: absolute;
+    left: 42px;
+    top: 196px;
+      width: 108px;
+height: 20px;
+
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 20px;
+/* identical to box height, or 143% */
+
+
+color: rgba(0, 0, 0, 0.8);
+
+    box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 14px 0px 14px 24px;
+gap: 10px;
+
+width: 340px;
+height: 48px;
+
+background: #FFFFFF;
+border: 2px solid rgba(0, 0, 0, 0.3);
+border-radius: 20px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+}
+
+#connect{
+  box-sizing: border-box;
+position: absolute;
+width: 340px;
+height: 56px;
+left: 42px;
+top: 410px;
+  border: none;
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 32px;
+
+background: #7EA26E;
+border-radius: 20px;
+    cursor: pointer;
+
+}
+#closeIcon{
+     padding: 0px;
+    margin: 0px;
+    width: 24px;
+height: 24px;
+}
+#closeB{
+    border: 0;
+    padding: 0px;
+    margin: 0px;
+position: absolute;
+width: 24px;
+height: 24px;
+left: 358px;
+top: 32px;
+     background: transparent;
+    cursor: pointer;
+}
+
+#connection_logging {
+    font-family: 'Montserrat';
+    text-align: center;
+    margin-top: 70%;
+}
